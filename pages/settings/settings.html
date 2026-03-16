@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>TabStack — Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="page-header">
+    <div class="logo">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <rect x="1" y="1" width="6" height="6" rx="1.5" fill="currentColor"/>
+        <rect x="9" y="1" width="6" height="6" rx="1.5" fill="currentColor" opacity=".5"/>
+        <rect x="1" y="9" width="6" height="6" rx="1.5" fill="currentColor" opacity=".5"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.5" fill="currentColor" opacity=".25"/>
+      </svg>
+    </div>
+    <h1 class="page-title" data-i18n="settingsTitle"></h1>
+    <span class="saved-hint hidden" id="savedHint" data-i18n="saved"></span>
+  </div>
+
+  <div class="settings-container">
+
+    <div class="section-label" data-i18n="sectionBehavior"></div>
+    <div class="section-card">
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="settingConfirm"></div>
+          <div class="setting-sub" data-i18n="settingConfirmSub"></div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="confirmSaveAll"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="settingPreview"></div>
+          <div class="setting-sub" data-i18n="settingPreviewSub"></div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="showCurrentPreview"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+      <div class="setting-row" style="border-bottom: none;">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="settingRemove"></div>
+          <div class="setting-sub" data-i18n="settingRemoveSub"></div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="removeOnRestore"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+    </div>
+
+    <div class="section-label" data-i18n="sectionData"></div>
+    <div class="section-card">
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="settingAutoClear"></div>
+          <div class="setting-sub" data-i18n="settingAutoClearSub"></div>
+        </div>
+        <select class="select-input" id="autoClearDays">
+          <option value="0" data-i18n="autoClearNever"></option>
+          <option value="7" data-i18n="autoClear7"></option>
+          <option value="30" data-i18n="autoClear30"></option>
+          <option value="90" data-i18n="autoClear90"></option>
+        </select>
+      </div>
+      <div class="setting-row" style="border-bottom: none;">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="settingClearData"></div>
+          <div class="setting-sub" data-i18n="settingClearDataSub"></div>
+        </div>
+        <button class="danger-btn" id="clearAllData" data-i18n="clearDataBtn"></button>
+      </div>
+    </div>
+
+    <div class="section-label" data-i18n="sectionLanguage"></div>
+    <div class="section-card">
+      <div class="setting-row" style="border-bottom: none;">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="language"></div>
+          <div class="setting-sub" data-i18n="languageSub"></div>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+          <button class="lang-btn" data-lang="zh_CN" data-i18n="langZh"></button>
+          <button class="lang-btn" data-lang="en" data-i18n="langEn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label" data-i18n="sectionShortcuts"></div>
+    <div class="section-card">
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="shortcutSaveCurrent"></div>
+          <div class="setting-sub" data-i18n="shortcutSaveCurrentSub"></div>
+        </div>
+        <div class="kbd-group"><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">1</span></div>
+      </div>
+      <div class="setting-row" style="border-bottom: none;">
+        <div class="setting-info">
+          <div class="setting-title" data-i18n="shortcutSaveAll"></div>
+          <div class="setting-sub" data-i18n="shortcutSaveAllSub"></div>
+        </div>
+        <div class="kbd-group"><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">2</span></div>
+      </div>
+      <div class="shortcut-note">
+        <span data-i18n="shortcutNote"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../../shared/storage.js"></script>
+  <script src="../../shared/i18n.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

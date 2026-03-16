@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>TabStack</title>
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+  <div class="page-header">
+    <div class="header-left">
+      <div class="logo">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="1" width="6" height="6" rx="1.5" fill="currentColor"/>
+          <rect x="9" y="1" width="6" height="6" rx="1.5" fill="currentColor" opacity=".5"/>
+          <rect x="1" y="9" width="6" height="6" rx="1.5" fill="currentColor" opacity=".5"/>
+          <rect x="9" y="9" width="6" height="6" rx="1.5" fill="currentColor" opacity=".25"/>
+        </svg>
+      </div>
+      <h1 class="page-title">TabStack</h1>
+    </div>
+    <div class="header-center">
+      <div class="search-wrap">
+        <svg class="search-icon" width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.5 8.5L11 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <input class="search-input" id="searchInput" type="text" data-i18n-placeholder="searchPlaceholder">
+      </div>
+      <div class="filter-group" id="filterGroup">
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll"></button>
+        <button class="filter-btn" data-filter="current" data-i18n="filterCurrent"></button>
+        <button class="filter-btn" data-filter="all-tabs" data-i18n="filterAllTabs"></button>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="list-container" id="listContainer">
+    <div class="empty-state hidden" id="emptyState">
+      <div class="empty-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+          <rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+          <rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+        </svg>
+      </div>
+      <div class="empty-title" id="emptyTitle"></div>
+      <div class="empty-sub" id="emptySub"></div>
+    </div>
+    <div id="groups"></div>
+  </div>
+
+  <script src="../../shared/storage.js"></script>
+  <script src="../../shared/i18n.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>
